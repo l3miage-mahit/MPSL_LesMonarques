@@ -1,0 +1,51 @@
+---
+title: "Rapport sur l'insertion professionnelle des diplômés de Master"
+author: "Hicham GANNOUNE"
+date: "23/02/2021"
+output:
+  html_document:
+    df_print: paged
+  pdf_document: default
+---
+
+# Sommaire  
+1. [Introduction](#introduction)  
+2. [Environement](#Préparation de l'environnement)  
+3. [Préparation de données](#Télechargement des données)  
+
+
+## Préparation de l'environnement 
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+```{r, include=FALSE}
+options(tinytex.verbose = TRUE)
+```
+```{r}
+# The environment
+library(tidyverse)
+library(ggplot2)
+
+version
+```
+
+## 
+
+
+## Télechargement des données 
+```{r}
+file = "fr-esr-insertion_professionnelle-master_donnees_nationales.csv"
+if(!file.exists(file)){
+  download.file("https://www.data.gouv.fr/fr/datasets/r/c6dd1d48-4c23-48db-9b08-608e11dc4a95",
+	destfile=file)
+}
+```
+
+## Constutution des données a partir du fichier
+
+```{r}
+dataInsertion <- read_delim("fr-esr-insertion_professionnelle-master_donnees_nationales.csv",delim=";")
+```
+
+
