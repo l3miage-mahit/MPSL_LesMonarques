@@ -1,6 +1,6 @@
 ---
 title: "Rapport sur l'insertion professionnelle des diplômés de Master"
-author: "Hicham GANNOUNE"
+author: "Hicham GANNOUNE", "Tariq MAHI"
 date: "23/02/2021"
 output:
   html_document:
